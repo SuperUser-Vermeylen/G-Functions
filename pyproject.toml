@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "g-functions"
+version = "0.1.0"
+description = "Interactive Gibbs energy and binary phase diagram visualization"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.8.0",
+  "numpy>=1.26.0",
+  "pandas>=2.2.0",
+  "sympy>=1.12.0",
+]
+
+[project.scripts]
+g-functions = "g_functions.__main__:main"
+
+[tool.setuptools]
+packages = ["g_functions"]
